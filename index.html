@@ -10,23 +10,23 @@ html,body{margin:0;padding:0;overflow:hidden;}
 body{background:url(images/body_bg.jpg) 0px 0px repeat-x #000;}
 .main_bg{background:url(images/main_bg.jpg) top center no-repeat;height:1000px;}
 .main{width:1000px;height:1000px;position:relative;margin:0 auto;}
-.num_mask{background:url(images/num_mask.png) 0px 0px no-repeat;height:184px;width:990px;position:absolute;left:50%;top:340px;margin-left:-370px;z-index:9;}
-.num_box{height:450px;width:2000px;position:absolute;left:0%;top:340px;margin-left:-370px;z-index:8;overflow:hidden;text-align:center;}
-.num{background:url(images/num.png) top center repeat-y;width:172px;height:265px;float:left;margin-right:6px;}
-.mi{color:red;width:500px;height:265px;float:left;margin-right:6px;}
-.btn{background:url(images/btn_start.png) 0px 0px no-repeat;width:264px;height:89px;position:absolute;left:46%;bottom:50px;margin-left:-132px;cursor:pointer;clear:both;}
+.num_mask{background:url(images/num_mask.png) 0px 0px no-repeat;height:280px;width:1600px;top:235px;position:absolute;z-index:9;left:-300px;}
+.num_box{height:450px;width:2000px;position:absolute;left:11%;top:340px;margin-left:-370px;z-index:8;overflow:hidden;text-align:center;}
+.num{background:url(images/num.png) top center repeat-y;width:152px;height:265px;float:left;margin-right:6px;}
+.mi{color:red;width:413px;height:265px;float:left;margin-right:6px;}
+.btn{background:url(images/btn_start.png) 0px 0px no-repeat;width:264px;height:89px;position:absolute;left:38%;bottom:50px;margin-left:-132px;cursor:pointer;clear:both;z-index:10;}
 </style>
 </head>
 <body>
 <div class="main_bg">
   <div class="main">
-    <div id="res" style="text-align:center;color:#fff;padding-top:15px;"></div>
     <div class="num_mask"></div>
+    <div id="res" style="text-align:center;color:#fff;padding-top:15px;"></div>
     <div class="num_box">
       <div class="num"></div>
       <div class="num"></div>
       <div class="num"></div>
-      <div class="mi">****</div>
+      <div class="mi"></div>
       <div class="num"></div>
       <div class="num"></div>
       <div class="num"></div>
@@ -49,7 +49,7 @@ $(function(){
 		isBegin = true;
 		$(".num").css('backgroundPositionY',0);
 		var result = numRand();
-		$('#res').text('随机摇奖结果 = '+result);
+		// $('#res').text('随机摇奖结果 = '+result);
 		var num_arr = (result+'').split('');
 		$(".num").each(function(index){
 			var _num = $(this);
@@ -68,6 +68,3 @@ $(function(){
 	});	
 });
 </script>
-<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
-<p>整理编辑：<a href="http://www.js-css.cn/" target="_blank">JS代码网</a></p>
-</div>
